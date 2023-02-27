@@ -1,0 +1,46 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  .formGroup {
+    border: 0.2rem solid #f0f0f0;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    height: 16rem;
+    width: 15rem;
+    padding-top: 1.2rem;
+
+    p {
+      font-family: "Unbounded", cursive;
+      color: #fff;
+      font-size: 30rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      align-self: center;
+    }
+
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.6rem;
+
+      input {
+        padding: 0.2rem;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 6rem;
+      align-self: center;
+      padding: 0.2rem;
+    }
+  }
+}
