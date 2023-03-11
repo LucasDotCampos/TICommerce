@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "Product" (
-    "id" TEXT NOT NULL PRIMARY KEY,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "name" TEXT NOT NULL,
-    "price" INTEGER NOT NULL
-);

@@ -21,8 +21,20 @@ model Product {
   id String @id @default(uuid())
   createdAt DateTime @default(now())
   name String  
-  price Int
+  price Decimal
   quantity Int
   image String
+  description String
 }
 
+model Schedule {
+  id String @id @default(uuid())
+  status Boolean @default(false)
+  schedule DateTime
+  hour String
+  cellphone String
+  address String
+  client String
+  services String
+  createdAt DateTime @default(now())
+}

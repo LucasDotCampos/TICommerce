@@ -10,13 +10,14 @@ export default {
     },
     filename(request, file, callback) {
       const hash = crypto.randomBytes(6).toString("hex");
-      const fileName = `${hash}-${file.originalname}`;
+      let imageFilename = file.originalname.replace(/[\n\r\s\t]+/g, "-");
+      const fileName = `${hash}-${imageFilename}`;
 
       callback(null, fileName);
     },
   }),
   limits: {
-    fileSize: 10 * 1024 * 1024,
+    fileSize: 30 * 1024 * 1024,
   },
   fileFilter: (request: any, file: any, callback: any) => {
     const mimetypes = ["image/jpeg", "jtif", "image/png", "image/gif"];

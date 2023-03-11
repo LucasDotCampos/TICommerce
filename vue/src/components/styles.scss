@@ -1,0 +1,40 @@
+.nav {
+  width: 100vw;
+  height: 4rem;
+  background-color: #246660;
+  display: flex;
+  padding: 1rem;
+  border-bottom: 2px solid #fff;
+
+  .link-list {
+    width: 100%;
+    height: 2.1rem;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+
+    h1 {
+      color: #f0f0f0;
+      text-align: center;
+      margin-right: 30rem;
+    }
+    li {
+      display: flex;
+
+      border-radius: 0.2rem;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 90%;
+      }
+
+      a {
+        color: #fff;
+        &:hover {
+          opacity: 90%;
+        }
+      }
+    }
+  }
+}

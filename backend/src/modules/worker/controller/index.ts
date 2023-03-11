@@ -23,9 +23,9 @@ export class WorkerController {
         cpf,
         password,
       });
-      return response.json(session);
+      return response.status(200).json(session);
     } catch (err: any) {
-      return response.json(err.message);
+      return response.status(400).json(err.message);
     }
   }
 }

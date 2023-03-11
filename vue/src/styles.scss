@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Overpass:wght@400;500;900&family=Rubik:wght@400;500;700&family=Unbounded:wght@900&&family=Sora:wght@400;500;900&display=swap");
+:root {
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(16, 14, 15, 1);
+  background-color: #f0f0f0;
+  font-synthesis: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  padding: 0.3rem;
+  border: solid 0.1rem #acaaaa;
+  &:focus {
+    outline: none;
+  }
+}
+input,
+label,
+button {
+  font-family: "Overpass", sans-serif;
+  border-radius: 0.2rem;
+  border: 0;
+  padding: 0.1rem;
+  a {
+    color: #f0f0f0;
+  }
+}

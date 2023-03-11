@@ -1,0 +1,45 @@
+<template>
+  <Navbar />
+  
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import {} from '../'
+import Navbar from "../components/navbar.vue";
+
+
+
+export default defineComponent({
+  data() {
+    return {
+      
+    };
+  },
+  async mounted() {
+    const response = await api.get("/product");
+    this.products = response.data;
+  },
+  methods: {
+    sendToEditPage(product_id: string) {
+      console.log(product_id);
+      localStorage.setItem("product_id", product_id);
+      this.$router.push("/produto/editar");
+    },
+  },
+  components: {
+    Navbar,
+  },
+});
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
+</script>
+
+<style src="./styles/products.scss" lang="scss" scoped />

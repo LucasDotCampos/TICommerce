@@ -1,8 +1,13 @@
 import { PrismaClient, Product } from "@prisma/client";
-import { IProduct } from "../models";
 
 export class ProductService {
-  async create({ name, price, quantity, image }: IProduct) {
+  async create({
+    name,
+    price,
+    quantity,
+    image,
+    description,
+  }: Omit<Product, "id" | "createdAt">) {
     const prisma = new PrismaClient();
 
     const product = await prisma.product.create({
@@ -11,14 +16,24 @@ export class ProductService {
         price,
         quantity,
         image,
+        description,
       },
     });
-    console.log("chegou");
     return product;
   }
 
   async update(id: string, quantity: number) {
     const prisma = new PrismaClient();
+
+    const productExists = await prisma.product.findFirst({
+      where: {
+        id,
+      },
+    });
+
+    if (!productExists) {
+      throw new Error("this product wasn't found");
+    }
 
     const product = await prisma.product.update({
       data: {
@@ -29,5 +44,30 @@ export class ProductService {
       },
     });
     return product;
+  }
+
+  async getAll() {
+    const prisma = new PrismaClient();
+    const products = await prisma.product.findMany();
+    return products;
+  }
+
+  async getById(id: string) {
+    const prisma = new PrismaClient();
+    const product = await prisma.product.findFirst({
+      where: {
+        id,
+      },
+    });
+    return product;
+  }
+
+  async delete(id: string) {
+    const prisma = new PrismaClient();
+    await prisma.product.delete({
+      where: {
+        id,
+      },
+    });
   }
 }

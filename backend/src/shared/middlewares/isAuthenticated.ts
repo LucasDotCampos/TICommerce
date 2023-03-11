@@ -29,6 +29,6 @@ export default function isAuthenticated(
 
     return next();
   } catch {
-    return response.status(404).json("Invalid JWT Token.");
+    return response.status(401).json("Invalid JWT Token.");
   }
 }
