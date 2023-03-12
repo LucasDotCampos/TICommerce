@@ -1,6 +1,4 @@
 <template>
-  <Navbar />
-
   <div class="product-container">
     <h1>Carrinho</h1>
     <div class="product-list">
@@ -49,7 +47,6 @@ export default defineComponent({
     };
   },
   methods: {},
-  components: { Navbar },
 });
 </script>
 <style src="./styles/ShoppingCart.scss" scoped />

@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <div class="product-container">
     <h1>Produtos</h1>
     <div class="product-list">
@@ -30,7 +29,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar from "../components/navbar.vue";
 import { api } from "../services/api";
 
 let isButtonVisible = false;
@@ -59,9 +57,6 @@ export default defineComponent({
 
       this.$router.push("/carrinho");
     },
-  },
-  components: {
-    Navbar,
   },
 });
 

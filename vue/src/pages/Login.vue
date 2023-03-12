@@ -1,21 +1,25 @@
 <template>
-  <Navbar />
   <form className="formContainer" @submit.prevent="sendData">
     <div className="formGroup">
       <h1>Login</h1>
 
       <div className="inputContainer">
-        <label htmlFor="cpf">CPF</label>
-        <input type="text" placeholder="ex: 00000000000" v-model="cpf" />
+        <label htmlFor="cpf">email</label>
+        <input
+          type="text"
+          placeholder="ex: johndoe@johndoe.com"
+          v-model="email"
+        />
       </div>
       <div className="inputContainer">
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">password</label>
         <input
           type="password"
           placeholder="ex: !@#$%1542test"
           v-model="password"
         />
       </div>
+      <a href="#">Não tem conta?</a>
       <button type="submit">Enviar</button>
     </div>
   </form>
@@ -30,7 +34,7 @@ import { api } from "../services/api";
 export default {
   data() {
     return {
-      cpf: "",
+      email: "",
       password: "",
     };
   },
@@ -38,7 +42,7 @@ export default {
     async sendData() {
       try {
         const response = await api.post("/session", {
-          cpf: this.cpf,
+          email: this.email,
           password: this.password,
         });
         localStorage.setItem("token", response.data.token);
@@ -48,6 +52,5 @@ export default {
       }
     },
   },
-  components: { Navbar },
 };
 </script>

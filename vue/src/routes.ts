@@ -7,6 +7,7 @@ import CreateProduct from "./pages/CreateProduct.vue";
 import Test from "./pages/test.vue";
 import Schedulling from "./pages/Schedulling.vue";
 import ShoppingCartVue from "./pages/ShoppingCart.vue";
+import About from "./pages/About.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -39,6 +40,11 @@ const routes: RouteRecordRaw[] = [
     path: "/login",
     name: "login",
     component: Login,
+  },
+  {
+    path: "/sobre",
+    name: "about",
+    component: About,
   },
 
   {

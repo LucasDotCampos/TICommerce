@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <form @submit.prevent="handleSubmit">
     <div class="formGroup">
       <h1>Agendamento</h1>
@@ -55,7 +54,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navbar from "../components/navbar.vue";
 import { api } from "../services/api";
 
 export default defineComponent({
@@ -92,7 +90,6 @@ export default defineComponent({
       }
     },
   },
-  components: { Navbar },
 });
 </script>
 <style src="./styles/Schedulling.scss" scoped />

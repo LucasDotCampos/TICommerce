@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <div>
     <h1>Update Product Quantity</h1>
     <form @submit.prevent="sendPayload">
@@ -37,7 +36,7 @@ export default {
       try {
         const product_id = localStorage.getItem("product_id");
         const token = localStorage.getItem("token");
-        const response = await api.patch(
+        await api.patch(
           "/product/patch",
           {
             id: product_id,
@@ -49,7 +48,6 @@ export default {
             },
           }
         );
-        console.log(response.data);
       } catch (error: any) {
         console.error(error.message);
       }
@@ -71,6 +69,5 @@ export default {
   mounted() {
     this.getData();
   },
-  components: { Navbar },
 };
 </script>
